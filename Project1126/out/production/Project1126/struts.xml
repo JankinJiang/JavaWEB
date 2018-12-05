@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <package name="default" namespace="/" extends="struts-default">
+
+        <action name="login" class="Action.LoginAction" method="execute">
+            <result name="admin">admin.jsp</result>
+            <result name="user">user.jsp</result>
+            <result name="error">index.jsp</result>
+        </action>
+
+
+
+        <action name="add" class="Action.editAction" method="addUser" >
+            <result name="editsuccess">admin.jsp</result>
+            <result name="error">index.jsp</result>
+        </action>
+        <action name="del" class="Action.editAction" method="delUser">
+            <result name="editsuccess">admin.jsp</result>
+            <result name="error">index.jsp</result>
+        </action>
+        <action name="adminfind" class="Action.editAction" method="findUser" >
+            <result name="findsuccess">admin.jsp</result>
+            <result name="error">index.jsp</result>
+        </action>
+        <action name="userfind" class="Action.editAction" method="findUser">
+            <result name="findsuccess">user.jsp</result>
+            <result name="error">index.jsp</result>
+        </action>
+        <action name="updt" class="Action.editAction" method="updtUser" >
+            <result name="editsuccess">admin.jsp</result>
+            <result name="error">index.jsp</result>
+        </action>
+    </package>
+</struts>
